@@ -211,7 +211,7 @@ Search Syntax Guide:
 
         return [
             Tool(
-                name="search",
+                name="search_for_local_files",
                 description=description,
                 inputSchema=UnifiedSearchQuery.get_schema_for_platform()
             )
@@ -219,7 +219,7 @@ Search Syntax Guide:
 
     @server.call_tool()
     async def call_tool(name: str, arguments: dict) -> List[TextContent]:
-        if name != "search":
+        if name != "name="search_for_local_files":
             raise ValueError(f"Unknown tool: {name}")
 
         try:
