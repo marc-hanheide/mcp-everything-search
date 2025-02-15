@@ -219,7 +219,7 @@ Search Syntax Guide:
 
     @server.call_tool()
     async def call_tool(name: str, arguments: dict) -> List[TextContent]:
-        if name != "name="search_for_local_files":
+        if name != "search_for_local_files":
             raise ValueError(f"Unknown tool: {name}")
 
         try:
